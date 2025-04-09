@@ -10,13 +10,16 @@
 </head>
 
 <body>
-  <form id="myForm" action="https://formsubmit.co/pietrogiordanoc@gmail.com" method="POST"
-    enctype="multipart/form-data">
+  <!-- Formulario -->
+  <form id="myForm" name="service-order" method="POST" enctype="multipart/form-data">
+    <!-- Campo oculto requerido por Netlify -->
+    <input type="hidden" name="form-name" value="service-order">
+
     <h2>Service Order</h2>
 
+    <!-- Sección de Información del Cliente y Servicio -->
     <div class="form-row">
       <div class="form-column">
-        <!-- Customer and Service Information -->
         <label for="date">Date*:</label>
         <input type="date" id="date" name="date" required>
 
@@ -72,11 +75,11 @@
       </div>
     </div>
 
-    <!-- Visual Separation -->
+    <!-- Separador Visual -->
     <div class="section-divider"></div>
 
+    <!-- Sección de Equipos -->
     <h3>Equipment</h3>
-
     <div class="equipment-section">
       <div class="equipment">
         <div class="form-row">
@@ -106,9 +109,10 @@
       <button type="button" class="add-equipment">Add more Equipment</button>
     </div>
 
-    <!-- Visual Separation -->
+    <!-- Separador Visual -->
     <div class="section-divider"></div>
 
+    <!-- Sección de Partes -->
     <h3>Parts</h3>
     <div class="parts">
       <div class="part-row">
@@ -152,10 +156,10 @@
       <input type="text" id="partsTotal" name="partsTotal" step="0.01" class="partsTotal" readonly value="0,00">
     </div>
 
-    <!-- Visual Separation -->
+    <!-- Separador Visual -->
     <div class="section-divider"></div>
 
-    <!-- Workforce -->
+    <!-- Sección de Mano de Obra -->
     <h3>Workforce</h3>
     <div class="workforce">
       <div class="workforce-row">
@@ -192,9 +196,10 @@
       <input type="text" id="grandTotal" name="grandTotal" step="0.01" readonly value="0,00">
     </div>
 
-    <!-- Visual Separation -->
+    <!-- Separador Visual -->
     <div class="section-divider"></div>
 
+    <!-- Sección de Adjuntos y Descripción -->
     <div class="form-row">
       <div class="form-column">
         <label for="attachment">Photos*:</label>
@@ -218,8 +223,7 @@
       </div>
     </div>
 
-    <input type="hidden" name="_next" value="https://example.com/thank-you.html">
-    <input type="hidden" name="_subject" value="New submission!">
+    <!-- Botón de Envío -->
     <button type="submit" class="submit-btn">Submit</button>
   </form>
 </body>
